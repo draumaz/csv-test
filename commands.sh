@@ -8,3 +8,12 @@ for LINE in `cat ${FILE} | tr ';' '\n'`; do
     sed -i "s/${LINE}/${FIXED_LINE}/g" ${FILE} ;;esac
   ;; esac
 done
+
+# replace ' with "'"
+sed -i "s/'/\"'\"/g" ${FILE}
+
+# replace , with ","
+sed -i 's/,/","/g' ${FILE}
+
+# replace ; with ,
+sed -i 's/;/,/g' ${FILE}
