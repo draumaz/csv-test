@@ -10,7 +10,7 @@ for LINE in `cat ${FILE} | tr ';' '\n'`; do
 done
 
 sed -i 's/Start Timestamp/Start/g' ${FILE}
-sed -i 's/Stop Timestamp/Stop/g' ${FILE}
+sed -i 's/End Timestamp/End/g' ${FILE}
 
 # replace ' with "'"
 sed -i "s/'/\"'\"/g" ${FILE}
