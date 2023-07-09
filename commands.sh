@@ -13,10 +13,10 @@ sed -i 's/Start Timestamp/Start/g' ${FILE}
 sed -i 's/End Timestamp/End/g' ${FILE}
 
 # replace ' with "'"
-sed -i "s/'/\"'\"/g" ${FILE}
+#sed -i "s/'/\"'\"/g" ${FILE}
 
 # replace , with ","
-sed -i 's/,/","/g' ${FILE}
+#sed -i 's/,/","/g' ${FILE}
 
 # replace ; with ,
-sed -i 's/;/,/g' ${FILE}
+#sed -i 's/;/,/g' ${FILE}
