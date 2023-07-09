@@ -9,6 +9,9 @@ for LINE in `cat ${FILE} | tr ';' '\n'`; do
   ;; esac
 done
 
+sed -i 's/Start Timestamp/Start/g' ${FILE}
+sed -i 's/Stop Timestamp/Stop/g' ${FILE}
+
 # replace ' with "'"
 sed -i "s/'/\"'\"/g" ${FILE}
 
