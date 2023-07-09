@@ -16,7 +16,7 @@ sed -i 's/End Timestamp/End/g' ${FILE}
 #sed -i "s/'/\"'\"/g" ${FILE}
 
 # replace , with ","
-#sed -i 's/,/","/g' ${FILE}
+sed -i 's/,/","/g' ${FILE}
 
 # replace ; with ,
 #sed -i 's/;/,/g' ${FILE}
