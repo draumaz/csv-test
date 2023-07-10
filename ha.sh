@@ -2,6 +2,9 @@
 
 case $1 in "")exit 1;;esac
 
+# Quote commas inside transcript
+sed -i 's/,/","/g' "${1}"
+
 # Fix European time formatting that fucks with parsers *badly*
 while read LINE; do
 
