@@ -5,11 +5,6 @@ case $1 in "")exit 1;;esac
 # Fix European time formatting that fucks with parsers *badly*
 while read LINE; do
 
-  T_TEXT="`echo "$LINE" | tr ';' '\n' | grep '"'`"
-  T_TEXT_FIX="`echo "${T_TEXT}" | sed 's/,/","/g'`"
-  sed -i "s/${T_TEXT}/${T_TEXT_FIX}/g" "${1}"
-  #T_TEXT-FIX="`echo ${T_TEXT} | sed 's/,/","/g'`"
-
   # Select the timestamps and replace the ',' with another ':' (fucking Europeans)
   T_START="$(echo ${LINE} | tr ';' '\n' | head -1)"
   T_START_FIX="$(echo $T_START | sed 's/,/:/g')"
