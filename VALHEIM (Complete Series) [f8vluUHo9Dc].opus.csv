@@ -1,5 +1,5 @@
-Start Timestamp;End Timestamp;Transcript
-00:00,000;00:03,920;"Hello, I've seen you guys around here"
+Start Timestamp,End Timestamp,Transcript
+00:00:000,00:03:920,"Hello, I've seen you guys around here"
 00:03,920;00:05,380;"Stop"
 00:05,380;00:07,380;"I think we can work something out"
 00:07,380;00:10,020;"I think we can work out"
