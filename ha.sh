@@ -12,8 +12,8 @@ while read LINE; do
   T_END_FIX="$(echo $T_END | sed 's/,/:/g')"
 
   # Write changes to file
-  #sed -i "s/${T_START}/${T_START_FIX}/g" "${1}"
-  #sed -i "s/${T_END}/${T_END_FIX}/g" "${1}"
+  sed -i "s/${T_START}/${T_START_FIX}/g" "${1}"
+  sed -i "s/${T_END}/${T_END_FIX}/g" "${1}"
 
 done < "${1}"
 
@@ -22,3 +22,4 @@ done < "${1}"
 
 # Ensure all deliniators are commas
 sed -i 's/;/,/g' "${1}"
+
